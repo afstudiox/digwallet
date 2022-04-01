@@ -29,3 +29,10 @@
   width: 100%;
 }
 
+.container-header {
+  align-items: center;
+  background-color: azure;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+

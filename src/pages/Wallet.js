@@ -1,12 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { thunkCurrency } from '../actions';
+import '../style.css';
 
 class Wallet extends React.Component {
+  componentDidMount() {
+    const { importThunkCurrency } = this.props;
+    importThunkCurrency();
+  }
+
   render() {
     const { emailState } = this.props;
     return (
-      <div className="container">
+      <div className="container-header row">
         <p> Email: </p>
         <span data-testid="email-field">{ emailState }</span>
         <p> Despesa Total: R$ </p>
@@ -20,8 +27,13 @@ class Wallet extends React.Component {
 const mapStateToProps = (state) => ({
   emailState: state.user.email });
 
+const mapDispatchToProps = (dispatch) => ({
+  importThunkCurrency: (curr) => dispatch(thunkCurrency(curr)),
+});
+
 Wallet.propTypes = {
-  emailState: PropTypes.objectOf(PropTypes.any).isRequired,
+  emailState: PropTypes.string.isRequired,
+  importThunkCurrency: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(Wallet);
+export default connect(mapStateToProps, mapDispatchToProps)(Wallet);

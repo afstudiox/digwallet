@@ -1,8 +1,9 @@
 // ACTIONS - index.js
 
+import currencyAPI from '../data/apis';
+
 export const SUCCESS = 'SUCCESS';
 export const REQUEST = 'REQUEST';
-export const ERROR = 'ERROR';
 export const LOGIN = 'LOGIN';
 
 export const login = (email) => (
@@ -18,14 +19,17 @@ export const request = () => (
   }
 );
 
-export const success = () => (
+export const success = (curr) => (
   {
     type: SUCCESS,
+    curr,
   }
 );
 
-export const error = () => (
-  {
-    type: ERROR,
-  }
-);
+export function thunkCurrency() {
+  return async (dispatch) => {
+    dispatch(request());
+    const curr = await currencyAPI();
+    return dispatch(success(curr));
+  };
+}
