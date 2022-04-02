@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { thunkCurrency } from '../actions';
 import '../style.css';
+import Expense from './Expense';
 
 class Wallet extends React.Component {
   componentDidMount() {
@@ -13,12 +14,15 @@ class Wallet extends React.Component {
   render() {
     const { emailState } = this.props;
     return (
-      <div className="container-header row">
-        <p> Email: </p>
-        <span data-testid="email-field">{ emailState }</span>
-        <p> Despesa Total: R$ </p>
-        <span data-testid="total-field">0</span>
-        <span data-testid="header-currency-field"> BRL </span>
+      <div className="container">
+        <header className="container-header row">
+          <p> Email: </p>
+          <span data-testid="email-field">{ emailState }</span>
+          <p> Despesa Total: R$ </p>
+          <span data-testid="total-field">0</span>
+          <span data-testid="header-currency-field"> BRL </span>
+        </header>
+        <Expense />
       </div>
     );
   }
