@@ -32,7 +32,10 @@ class Table extends Component {
                   <td>{ expense.method }</td>
                   <td>{ Number(expense.value).toFixed(2) }</td>
                   <td>{ expense.exchangeRates[expense.currency].name }</td>
-                  <td>{ Number(expense.exchangeRates[expense.currency].ask).toFixed(2) }</td>
+                  <td>
+                    { Number(expense.exchangeRates[expense.currency].ask)
+                      .toFixed(2) }
+                  </td>
                   <td>
                     { ((expense.exchangeRates[expense.currency].ask)
                   * expense.value).toFixed(2) }
