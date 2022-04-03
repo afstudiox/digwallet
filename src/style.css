@@ -110,7 +110,7 @@
   cursor: pointer;
 }
 
-*[ id = 'value' ] { 
+*[ id = 'value' ] {
   width: 80px;
 }
 
