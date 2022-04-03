@@ -126,3 +126,13 @@
 *[ id = 'method' ] {
   width: 140px;
 }
+
+.table-container {
+  justify-content: center;
+  width: 100%;
+}
+
+.table.container-th {
+  justify-content: center;
+  width: 100%;
+}
