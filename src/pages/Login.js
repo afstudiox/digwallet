@@ -19,12 +19,6 @@ class Login extends Component {
     this.setState({ [name]: value });
   }
 
-  // validateEmail = () => {
-  //   const { email } = this.state;
-  //   const regex = /\S+@\S+\.\S+/;
-  //   return regex.test(email);
-  // }
-
   validateFields = ({ target }) => {
     const { email } = this.state;
     const { value } = target;
