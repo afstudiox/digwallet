@@ -6,6 +6,7 @@ import { thunkCurrency } from '../actions';
 import '../style.css';
 import Logo from '../wallet.png';
 import Expense from './Expense';
+import Table from './Table';
 
 class Wallet extends React.Component {
   componentDidMount() {
@@ -58,6 +59,7 @@ class Wallet extends React.Component {
 
         </header>
         <Expense />
+        <Table />
       </div>
     );
   }
