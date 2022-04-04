@@ -133,6 +133,10 @@
 }
 
 .table.container-th {
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
+}
+
+.table.container-th th {
+  width: 10%;
 }
