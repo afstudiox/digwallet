@@ -7,6 +7,7 @@ export const REQUEST = 'REQUEST';
 export const LOGIN = 'LOGIN';
 export const EXPENSES = 'EXPENSES';
 export const DELETE = 'DELETE';
+export const EDIT = 'EDIT';
 
 export const login = (email) => (
   {
@@ -38,6 +39,13 @@ export const expenses = (listExpenses) => (
 export const deleteExpense = (id) => (
   {
     type: DELETE,
+    id,
+  }
+);
+
+export const editExpense = (id) => (
+  {
+    type: EDIT,
     id,
   }
 );

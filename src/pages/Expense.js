@@ -8,13 +8,21 @@ import '../style.css';
 class Expense extends React.Component {
   constructor() {
     super();
+
     this.state = {
       value: '',
       description: '',
-      currency: '',
+      currency: 'USD',
       method: '',
       tag: '',
+      id: '',
+      exchangeRates: [],
     };
+  }
+
+  editInfo = () => {
+    const { importEditExpense } = this.props;
+    this.setState(importEditExpense);
   }
 
   handleChange = ({ target }) => {
@@ -29,11 +37,19 @@ class Expense extends React.Component {
       id: importNextId,
       exchangeRates: await currencyAPI(),
     }, () => expensesDispatch(this.state));
-    this.setState({ value: '' });
+    this.setState({
+      value: '',
+      description: '',
+      currency: 'USD',
+      method: '',
+      tag: '',
+      id: '',
+      exchangeRates: [],
+    });
   }
 
   render() {
-    const { importLoadCurrencies } = this.props;
+    const { importLoadCurrencies, importEditExpense } = this.props;
     const { value, description, currency, method, tag } = this.state;
     return (
       <div className="container-expense col">
@@ -69,6 +85,7 @@ class Expense extends React.Component {
             Moeda:
             <select
               id="currency"
+              data-testid="currency-input"
               name="currency"
               value={ currency }
               onChange={ this.handleChange }
@@ -111,12 +128,11 @@ class Expense extends React.Component {
               <option>Saúde</option>
             </select>
           </label>
-
           <button
             type="submit"
             onClick={ this.sendInfo }
           >
-            Adicionar despesa
+            { importEditExpense.length === 0 ? 'Adicionar Despesa' : 'Editar despesa'}
           </button>
 
         </form>
@@ -128,16 +144,22 @@ class Expense extends React.Component {
 const mapStateToProps = (state) => ({
   importLoadCurrencies: state.wallet.currencies,
   importNextId: (state.wallet.expenses).length,
+  importEditExpense: state.wallet.editExpense,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   expensesDispatch: (listExpenses) => dispatch(expenses(listExpenses)),
 });
 
+Expense.defaultProps = {
+  importEditExpense: [],
+};
+
 Expense.propTypes = {
   importLoadCurrencies: PropTypes.arrayOf(PropTypes.any).isRequired,
   importNextId: PropTypes.number.isRequired,
   expensesDispatch: PropTypes.func.isRequired,
+  importEditExpense: PropTypes.arrayOf(PropTypes.any),
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Expense);

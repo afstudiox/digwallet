@@ -1,8 +1,9 @@
-import { SUCCESS, REQUEST, EXPENSES, DELETE } from '../actions';
+import { SUCCESS, REQUEST, EXPENSES, DELETE, EDIT } from '../actions';
 
 const initialState = {
   currencies: [],
   expenses: [],
+  editExpense: [],
 };
 
 function wallet(state = initialState, action) {
@@ -30,6 +31,7 @@ function wallet(state = initialState, action) {
           ...expenses,
           listExpenses,
         ],
+      editExpense: [],
     };
 
   case DELETE:
@@ -37,6 +39,14 @@ function wallet(state = initialState, action) {
       ...state,
       expenses:
         expenses.filter((item) => item.id !== +id),
+      editExpense: [],
+    };
+
+  case EDIT:
+    return {
+      ...state,
+      editExpense:
+        expenses.filter((item) => item.id === +id),
     };
 
   default:
