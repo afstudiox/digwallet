@@ -1,7 +1,6 @@
 # Projeto DigWallet
 
 ## Sobre
-Aplicação que reproduz músicas das mais variadas bandas e artistas, cria uma lista de músicas favoritas e edita o perfil da pessoa usuária logada.<br>
 Aplicação que simula um carteira de controle de gastos com conversor de moedas, onde é possível adicionar, remover ou editar os gastos, assim como visualizar em formato de tabelas os gastos inseridos mostrando um resumo do total de todos os gastos convertido para a moeda escolhida.<br>
 
 [Teste a aplicação aqui](https://afstudiox.github.io/digwallet)
