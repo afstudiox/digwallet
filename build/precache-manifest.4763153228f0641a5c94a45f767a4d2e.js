@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df694fa1600f39d6bb91ee21a5a9b4af",
+    "revision": "88cca19f1c64b12398887a0f674c60e6",
     "url": "/digwallet/index.html"
   },
   {
-    "revision": "4bfde718933e485a363d",
+    "revision": "97aecef7208da4e1dade",
     "url": "/digwallet/static/css/main.aa9acf90.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/digwallet/static/js/2.941ca837.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4bfde718933e485a363d",
-    "url": "/digwallet/static/js/main.32d4506e.chunk.js"
+    "revision": "97aecef7208da4e1dade",
+    "url": "/digwallet/static/js/main.a9bcf2ff.chunk.js"
   },
   {
     "revision": "faf1d9166548267207ae",
