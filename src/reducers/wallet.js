@@ -47,6 +47,8 @@ function wallet(state = initialState, action) {
       ...state,
       editExpense:
         expenses.filter((item) => item.id === +id),
+      expenses:
+        expenses.filter((item) => item.id !== +id),
     };
 
   default:

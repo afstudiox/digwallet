@@ -17,13 +17,18 @@ class Expense extends React.Component {
       tag: '',
       id: '',
       exchangeRates: [],
+      editMode: false,
     };
   }
 
-  editInfo = () => {
-    const { importEditExpense } = this.props;
-    this.setState(importEditExpense);
+  componentDidUpdate(prevProps) {
+    this.editMode(prevProps);
   }
+
+  // editInfo = () => {
+  //   const { importEditExpense } = this.props;
+  //   this.setState(importEditExpense);
+  // }
 
   handleChange = ({ target }) => {
     const { name, value } = target;
@@ -32,9 +37,10 @@ class Expense extends React.Component {
 
   sendInfo = async (e) => {
     const { expensesDispatch, importNextId } = this.props;
+    const { editMode, id } = this.state;
     e.preventDefault();
     this.setState({
-      id: importNextId,
+      id: editMode ? id : importNextId,
       exchangeRates: await currencyAPI(),
     }, () => expensesDispatch(this.state));
     this.setState({
@@ -45,7 +51,22 @@ class Expense extends React.Component {
       tag: '',
       id: '',
       exchangeRates: [],
+      editMode: false,
     });
+  }
+
+  editMode = async (prevProps) => {
+    const { importEditExpense } = this.props;
+    if ( importEditExpense.length > 0 && prevProps.importEditExpense.length === 0 ){
+      this.setState({
+          value: importEditExpense[0].value,
+          description: importEditExpense[0].description,
+          currency: importEditExpense[0].currency,
+          method: importEditExpense[0].method,
+          tag: importEditExpense[0].tag,
+          id: importEditExpense[0].id,
+          editMode: true,
+        })}
   }
 
   render() {
@@ -132,7 +153,7 @@ class Expense extends React.Component {
             type="submit"
             onClick={ this.sendInfo }
           >
-            { importEditExpense.length === 0 ? 'Adicionar Despesa' : 'Editar despesa'}
+            { importEditExpense.length === 0 ? 'Adicionar Despesa' : 'Salvar Despesa'}
           </button>
 
         </form>

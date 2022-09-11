@@ -2,6 +2,7 @@
 
 import currencyAPI from '../data/apis';
 
+// declaração dos tipos das Actions Types
 export const SUCCESS = 'SUCCESS';
 export const REQUEST = 'REQUEST';
 export const LOGIN = 'LOGIN';
@@ -9,6 +10,7 @@ export const EXPENSES = 'EXPENSES';
 export const DELETE = 'DELETE';
 export const EDIT = 'EDIT';
 
+// Actions Creators ( Criam e retornam as actions)
 export const login = (email) => (
   {
     type: LOGIN,
