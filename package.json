@@ -10,7 +10,7 @@
     "@testing-library/jest-dom": "4.2.4",
     "@testing-library/react": "10.0.4",
     "@testing-library/user-event": "7.2.1",
-    "bootstrap": "4.5.2",
+    "polished": "^4.2.2",
     "prop-types": "^15.8.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -21,6 +21,7 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "styled-components": "^5.3.5",
     "stylelint-order": "4.1.0"
   },
   "scripts": {
