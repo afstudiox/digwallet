@@ -4,6 +4,7 @@ export const GeneralContainer = styled.div`
   border: 1px solid red;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 100vw;
   height: 100vh;
   padding: 16px;
@@ -12,6 +13,7 @@ export const GeneralContainer = styled.div`
 export const HeaderContainer = styled.div`
   border: 1px solid grey;
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
 `;
@@ -39,6 +41,12 @@ export const HeaderWrapper = styled.div`
       border: 1px solid grey ;
     }
   }
+`;
+
+export const BodyWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
 `;
 
 export const UserField = styled.p`

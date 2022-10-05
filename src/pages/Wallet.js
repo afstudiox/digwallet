@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { thunkCurrency } from '../actions';
-import { GeneralContainer, HeaderContainer, HeaderWrapper, UserField } from '../styles/Wallet';
+import { BodyWrapper, GeneralContainer, HeaderContainer, HeaderWrapper, UserField } from '../styles/Wallet';
 import Logo from '../wallet.png';
 import Expense from './Expense';
 import Table from './Table';
@@ -37,6 +37,7 @@ class Wallet extends React.Component {
     const { emailState } = this.props;
     return (
       <GeneralContainer>
+
         <HeaderContainer>
           <HeaderWrapper>
             <figure><Link to="/"><img src={ Logo } alt="Logo" /></Link></figure>
@@ -50,8 +51,12 @@ class Wallet extends React.Component {
           </HeaderWrapper>
 
         </HeaderContainer>
-        <Expense />
-        <Table />
+
+        <BodyWrapper>
+          <Expense />
+          <Table />
+        </BodyWrapper>
+
       </GeneralContainer>
     );
   }
