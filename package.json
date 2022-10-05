@@ -22,7 +22,6 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.3.5",
-    "styled-icons": "^10.46.0",
     "stylelint-order": "4.1.0"
   },
   "scripts": {

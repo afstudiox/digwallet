@@ -1,9 +1,7 @@
-// import { EditAlt } from '@styled-icons/boxicons-regular/EditAlt';
-// import { Delete } from '@styled-icons/fluentui-system-filled/Delete';
 import styled from "styled-components";
 
 export const GeneralContainer = styled.div`
-  border: 1px solid red;
+  border: 5px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,18 +18,10 @@ export const GeneralContainer = styled.div`
     text-align: center;
     color: gray;
   }
-`
+`;
 
 export const BtnEditar = styled.button`
 `;
 
 export const BtnExcluir = styled.button`
 `;
-
-export const EditIcon = styled(material.Edit)`
-  
-`;
-
-export const DeleteIcon = styled(material.Delete)`
-  
-// `;
