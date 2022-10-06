@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/digwallet/static/css/main.aa9acf90.chunk.css",
-    "main.js": "/digwallet/static/js/main.a9bcf2ff.chunk.js",
-    "main.js.map": "/digwallet/static/js/main.a9bcf2ff.chunk.js.map",
+    "main.css": "/digwallet/static/css/main.ba77eb6a.chunk.css",
+    "main.js": "/digwallet/static/js/main.64ac1efd.chunk.js",
+    "main.js.map": "/digwallet/static/js/main.64ac1efd.chunk.js.map",
     "runtime-main.js": "/digwallet/static/js/runtime-main.8ce10b23.js",
     "runtime-main.js.map": "/digwallet/static/js/runtime-main.8ce10b23.js.map",
-    "static/js/2.941ca837.chunk.js": "/digwallet/static/js/2.941ca837.chunk.js",
-    "static/js/2.941ca837.chunk.js.map": "/digwallet/static/js/2.941ca837.chunk.js.map",
+    "static/js/2.6a9c50c8.chunk.js": "/digwallet/static/js/2.6a9c50c8.chunk.js",
+    "static/js/2.6a9c50c8.chunk.js.map": "/digwallet/static/js/2.6a9c50c8.chunk.js.map",
     "index.html": "/digwallet/index.html",
-    "precache-manifest.4763153228f0641a5c94a45f767a4d2e.js": "/digwallet/precache-manifest.4763153228f0641a5c94a45f767a4d2e.js",
+    "precache-manifest.d71756843a154a118829a0b8b084974f.js": "/digwallet/precache-manifest.d71756843a154a118829a0b8b084974f.js",
     "service-worker.js": "/digwallet/service-worker.js",
-    "static/css/main.aa9acf90.chunk.css.map": "/digwallet/static/css/main.aa9acf90.chunk.css.map",
-    "static/js/2.941ca837.chunk.js.LICENSE.txt": "/digwallet/static/js/2.941ca837.chunk.js.LICENSE.txt"
+    "static/css/main.ba77eb6a.chunk.css.map": "/digwallet/static/css/main.ba77eb6a.chunk.css.map",
+    "static/js/2.6a9c50c8.chunk.js.LICENSE.txt": "/digwallet/static/js/2.6a9c50c8.chunk.js.LICENSE.txt",
+    "static/media/bglogin.jpg": "/digwallet/static/media/bglogin.5b02bc01.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8ce10b23.js",
-    "static/js/2.941ca837.chunk.js",
-    "static/css/main.aa9acf90.chunk.css",
-    "static/js/main.a9bcf2ff.chunk.js"
+    "static/js/2.6a9c50c8.chunk.js",
+    "static/css/main.ba77eb6a.chunk.css",
+    "static/js/main.64ac1efd.chunk.js"
   ]
 }
