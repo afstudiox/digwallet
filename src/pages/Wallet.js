@@ -35,17 +35,24 @@ class Wallet extends React.Component {
 
   render() {
     const { emailState } = this.props;
+    const accExpensesString = +this.sumExpenses();
+    {console.log(typeof accExpensesString)}
     return (
       <GeneralContainer>
 
         <HeaderContainer>
-          <HeaderWrapper>
+          <HeaderWrapper width={100}>
             <figure><Link to="/"><img src={ Logo } alt="Logo" /></Link></figure>
               <h1>DIGWALLET</h1>
           </HeaderWrapper>
 
           <HeaderWrapper>
-            <p>Total<span>{ this.sumExpenses() }</span></p>
+            <p>Total<span>{ 
+            accExpensesString
+              ? accExpensesString.toLocaleString()
+                .toLocaleString('pt-br', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})
+              : '0,00' }</span>
+            </p>
             <p>Currency<span>BRL</span></p>
             <UserField>{ emailState }</UserField>
           </HeaderWrapper>

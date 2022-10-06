@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/digwallet/precache-manifest.5a1b7bfc4c4183e9524b597dc07ef59c.js"
+  "/digwallet/precache-manifest.1e1aba1b5b46d1e754d09a9ad425b9f8.js"
 );
 
 self.addEventListener('message', (event) => {

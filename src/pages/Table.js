@@ -11,10 +11,12 @@ class Table extends Component {
     deleteExpenseDispatch(id);
   }
 
+  // 
   editExpense = ({ target: { id } }) => {
     const { editExpenseDispatch } = this.props;
     editExpenseDispatch(id);
   }
+
 
   render() {
     const { importExpenses } = this.props;

@@ -26,11 +26,6 @@ class Expense extends React.Component {
     this.editMode(prevProps);
   }
 
-  // editInfo = () => {
-  //   const { importEditExpense } = this.props;
-  //   this.setState(importEditExpense);
-  // }
-
   handleChange = ({ target }) => {
     const { name, value } = target;
     this.setState({ [name]: value });

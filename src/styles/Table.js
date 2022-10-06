@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const GeneralContainer = styled.div`
-  border: 5px solid green;
+  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 16px;
+  padding: 1.6rem;
   thead > tr > th {
     background-color: antiquewhite;
-    padding: 8px;
-    height: 40px;
+    padding: 0.8rem;
+    height: 4rem;
     font-weight: 400;
   };
   tbody > tr > td {
