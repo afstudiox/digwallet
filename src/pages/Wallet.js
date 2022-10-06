@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { thunkCurrency } from '../actions';
-import '../style.css';
+import { BodyWrapper, GeneralContainer, HeaderContainer, HeaderWrapper, UserField } from '../styles/Wallet';
 import Logo from '../wallet.png';
 import Expense from './Expense';
 import Table from './Table';
@@ -35,32 +35,36 @@ class Wallet extends React.Component {
 
   render() {
     const { emailState } = this.props;
+    const accExpensesString = +this.sumExpenses();
+    {console.log(typeof accExpensesString)}
     return (
-      <div className="container">
-        <header className="container-header row">
+      <GeneralContainer>
 
-          <figure className="header-logo row">
-            <Link to="/"><img src={ Logo } alt="Logo" /></Link>
-          </figure>
+        <HeaderContainer>
+          <HeaderWrapper width={100}>
+            <figure><Link to="/"><img src={ Logo } alt="Logo" /></Link></figure>
+              <h1>DIGWALLET</h1>
+          </HeaderWrapper>
 
-          <h1>TRYBE WALLET</h1>
-
-          <div className="header-data row">
-            <p>
-              Email :
-              <span data-testid="email-field">{ emailState }</span>
+          <HeaderWrapper>
+            <p>Total<span>{ 
+            accExpensesString
+              ? accExpensesString.toLocaleString()
+                .toLocaleString('pt-br', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})
+              : '0,00' }</span>
             </p>
-            <p>
-              Despesa Total : R$
-              <span data-testid="total-field">{ this.sumExpenses() }</span>
-            </p>
-            <span data-testid="header-currency-field">BRL</span>
-          </div>
+            <p>Currency<span>BRL</span></p>
+            <UserField>{ emailState }</UserField>
+          </HeaderWrapper>
 
-        </header>
-        <Expense />
-        <Table />
-      </div>
+        </HeaderContainer>
+
+        <BodyWrapper>
+          <Expense />
+          <Table />
+        </BodyWrapper>
+
+      </GeneralContainer>
     );
   }
 }
