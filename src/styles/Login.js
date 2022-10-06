@@ -16,12 +16,20 @@ export const GeneralContainer = styled.div`
   flex-direction: row;
   width: 100vw;
   height: 100vh;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ImageContainer = styled.div`
   width: 100%;
   height: 100%;
   background: url(${imgUrl});
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const WrapperContainer = styled.div`
@@ -31,12 +39,34 @@ export const WrapperContainer = styled.div`
   align-items: center;
   justify-content: center;
   
+  h2{
+    width: 80%;
+    padding: ${({theme}) => theme.spacing.medium};
+    font-size: 6rem;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: ${({theme}) => theme.spacing.large};
+    @media (max-width: 768px) {
+      padding: ${({theme}) => theme.spacing.small};
+      font-size: ${({theme}) => theme.fontSizes.large};
+  }
+  }
+  
+  p{
+    margin-bottom: 1.6rem;
+    font-size: ${({theme}) => theme.fontSizes.large};
+  }
+
   form {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: ${({theme}) => theme.fontSizes.medium};
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   input{
@@ -52,6 +82,10 @@ export const WrapperContainer = styled.div`
       outline: none;
       background-color: ${({theme}) => theme.colors.gray03};
     }
+    @media (max-width: 768px) {
+      padding: ${({theme}) => theme.spacing.small};
+      font-size: ${({theme}) => theme.fontSizes.medium};
+  }
   }
   
   button{
@@ -70,20 +104,11 @@ export const WrapperContainer = styled.div`
     :hover{
       cursor: pointer;
     }
+    @media (max-width: 768px) {
+      padding: ${({theme}) => theme.spacing.small};
+      font-size: ${({theme}) => theme.fontSizes.medium};
+  }
   }
   
-  h2{
-    width: 80%;
-    padding: ${({theme}) => theme.spacing.medium};
-    font-size: 6rem;
-    font-style: italic;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: ${({theme}) => theme.spacing.large};
-  }
-  
-  p{
-    margin-bottom: 1.6rem;
-    font-size: ${({theme}) => theme.fontSizes.medium};
-  }
+
 `;

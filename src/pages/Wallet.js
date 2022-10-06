@@ -36,7 +36,6 @@ class Wallet extends React.Component {
   render() {
     const { emailState } = this.props;
     const accExpensesString = +this.sumExpenses();
-    {console.log(typeof accExpensesString)}
     return (
       <GeneralContainer>
 
