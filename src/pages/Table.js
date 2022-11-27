@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteExpense, editExpense } from '../actions';
 import '../style.css';
-import { GeneralContainer } from '../styles/Table';
+import { GeneralContainer, BtnEditar, BtnExcluir } from '../styles/Table';
 
 class Table extends Component {
   delExpense = ({ target: { id } }) => {
@@ -26,14 +26,14 @@ class Table extends Component {
           <thead>
             <tr>
               <th>Descrição</th>
-              <th>Tag</th>
+              <th>Categoria</th>
               <th>Método de pagamento</th>
               <th>Valor</th>
               <th>Moeda</th>
               <th>Câmbio utilizado</th>
               <th>Valor convertido</th>
               <th>Moeda de conversão</th>
-              <th>Editar/Excluir</th>
+              <th>Editar / Excluir</th>
             </tr>
           </thead>
   
@@ -57,23 +57,23 @@ class Table extends Component {
                       <td>{ totalExpense.toFixed(2) }</td>
                       <td>Real</td>
                       <td>
-                        <button
+                        <BtnEditar
                           id={ expense.id }
                           type="button"
                           data-testid="edit-btn"
                           onClick={ this.editExpense }
                         >
                           Edit
-                        </button>
+                        </BtnEditar>
   
-                        <button
+                        <BtnExcluir
                           id={ expense.id }
                           type="button"
                           data-testid="delete-btn"
                           onClick={ this.delExpense }
                         >
                           Delete
-                        </button>
+                        </BtnExcluir>
                       </td>
                     </tr>);
                 })
