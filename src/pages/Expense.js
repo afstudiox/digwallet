@@ -70,8 +70,8 @@ class Expense extends React.Component {
     const { value, description, currency, method, tag } = this.state;
     return (
       <GeneralContainer>
-        <h3>Expenses</h3>
         <ExpenseForm>
+        <h3>E x p e n s e s</h3>
 
         <label htmlFor="description">
             Descrição:

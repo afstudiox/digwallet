@@ -1,40 +1,57 @@
 import styled from "styled-components";
 
 export const GeneralContainer = styled.div`
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30rem;
-  padding: 1.6rem;
+  width: 350px;
+  padding: ${({ theme }) => theme.spacing.medium};
 `;
 
 export const ExpenseForm = styled.form`
   width: 100%;
-  border: 1px solid red;
+  h3{
+    font-size: 3rem;
+    color: ${({ theme }) => theme.colors.gray07};
+    text-transform: uppercase;
+  }
   label{
     display: flex;
     flex-direction: column;
-    margin: 1.2rem 0;
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+    margin: ${({ theme }) => theme.spacing.medium} 0;
   }
   input{
     width: 100%;
-    border: 1px solid gray;
-    border-radius: 0.4rem;
-    height: 3.2rem;
+    background: ${({ theme }) => theme.colors.gray07};
+    color: ${({ theme }) => theme.colors.gray03};
+    border: none;
+    border-radius: ${({ theme }) => theme.radius.medium};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+    padding: ${({theme}) => theme.spacing.small};
+    margin-top: ${({ theme }) => theme.spacing.small};
   }
   select{
     width: 100%;
-    border: 1px solid gray;
     margin: 0;
-    height: 3.2rem;
-  }
-`;
+    background: ${({ theme }) => theme.colors.gray07};
+    color: ${({ theme }) => theme.colors.gray03};
+    border-radius: ${({ theme }) => theme.radius.medium};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+    padding: ${({theme}) => theme.spacing.small};
+    margin-top: ${({ theme }) => theme.spacing.small};
+    option{
+      background: ${({ theme }) => theme.colors.gray07};
+    }
+  }`;
 
 export const BtnExpense = styled.button`
   width: 100%;
-  height: 3.2rem;
-  margin: 1.2rem 0;
-  font-size: 1rem;
+  padding: ${({theme}) => theme.spacing.small};
+  margin: ${({ theme }) => theme.spacing.medium} 0;
+  font-size: ${({theme}) => theme.fontSizes.medium};
+  border-radius: ${({ theme }) => theme.radius.medium};
+  background-color: ${({theme}) => theme.colors.gray03};
+  color: ${({theme}) => theme.colors.gray08};
   cursor: pointer;
 `;
