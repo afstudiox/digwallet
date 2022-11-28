@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/digwallet/static/css/main.104ffcb4.chunk.css",
-    "main.js": "/digwallet/static/js/main.8bc7b35b.chunk.js",
-    "main.js.map": "/digwallet/static/js/main.8bc7b35b.chunk.js.map",
+    "main.js": "/digwallet/static/js/main.18449a10.chunk.js",
+    "main.js.map": "/digwallet/static/js/main.18449a10.chunk.js.map",
     "runtime-main.js": "/digwallet/static/js/runtime-main.8ce10b23.js",
     "runtime-main.js.map": "/digwallet/static/js/runtime-main.8ce10b23.js.map",
     "static/js/2.fd52df9d.chunk.js": "/digwallet/static/js/2.fd52df9d.chunk.js",
     "static/js/2.fd52df9d.chunk.js.map": "/digwallet/static/js/2.fd52df9d.chunk.js.map",
     "index.html": "/digwallet/index.html",
-    "precache-manifest.be7d628a70ebb1279b55d1797b48414d.js": "/digwallet/precache-manifest.be7d628a70ebb1279b55d1797b48414d.js",
+    "precache-manifest.8030faf1da6743eac50f48e4d8df9e32.js": "/digwallet/precache-manifest.8030faf1da6743eac50f48e4d8df9e32.js",
     "service-worker.js": "/digwallet/service-worker.js",
     "static/css/main.104ffcb4.chunk.css.map": "/digwallet/static/css/main.104ffcb4.chunk.css.map",
     "static/js/2.fd52df9d.chunk.js.LICENSE.txt": "/digwallet/static/js/2.fd52df9d.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.8ce10b23.js",
     "static/js/2.fd52df9d.chunk.js",
     "static/css/main.104ffcb4.chunk.css",
-    "static/js/main.8bc7b35b.chunk.js"
+    "static/js/main.18449a10.chunk.js"
   ]
 }
