@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "45c72de3422ced7771104ed1bd917ded",
+    "revision": "cda90bf2fa4a2f4bcdb645e5fcad1b86",
     "url": "/digwallet/index.html"
   },
   {
-    "revision": "d4d77c546cad907e42f1",
-    "url": "/digwallet/static/css/main.ba77eb6a.chunk.css"
+    "revision": "6ebf8ddd20be21f43036",
+    "url": "/digwallet/static/css/main.104ffcb4.chunk.css"
   },
   {
-    "revision": "c816c0cdfe5af566d162",
-    "url": "/digwallet/static/js/2.6a9c50c8.chunk.js"
+    "revision": "bbbabe1c63fc8ac6e924",
+    "url": "/digwallet/static/js/2.fd52df9d.chunk.js"
   },
   {
     "revision": "1e7ce0b5e5c5dbbe2385af5c63cacff7",
-    "url": "/digwallet/static/js/2.6a9c50c8.chunk.js.LICENSE.txt"
+    "url": "/digwallet/static/js/2.fd52df9d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d4d77c546cad907e42f1",
-    "url": "/digwallet/static/js/main.54990d44.chunk.js"
+    "revision": "6ebf8ddd20be21f43036",
+    "url": "/digwallet/static/js/main.8bc7b35b.chunk.js"
   },
   {
     "revision": "faf1d9166548267207ae",
