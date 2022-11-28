@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { Edit } from '@styled-icons/boxicons-solid/Edit';
 import { Trash } from '@styled-icons/boxicons-solid/Trash';
+import styled from "styled-components";
 
 export const GeneralContainer = styled.div`
   /* border: 2px solid red; */
@@ -26,12 +26,12 @@ export const GeneralContainer = styled.div`
 `;
 
 export const BtnEditar = styled.button`
-  margin-right: 1rem;
   padding: ${({theme}) => theme.spacing.small};
   border: none;
   background: ${({ theme }) => theme.colors.gray08};
   color: ${({theme}) => theme.colors.gray08};
   cursor: pointer;
+  flex-grow: 1;
 `;
 
 export const BtnExcluir = styled.button`
@@ -40,6 +40,7 @@ export const BtnExcluir = styled.button`
   background: ${({ theme }) => theme.colors.gray08};
   color: ${({theme}) => theme.colors.gray08};
   cursor: pointer;
+  flex-grow: 1;
 `;
 
 export const EditIcon = styled(Edit)`
@@ -49,3 +50,10 @@ export const EditIcon = styled(Edit)`
 export const DeleteIcon = styled(Trash)`
   color: ${({theme}) => theme.colors.gray01};
 `
+
+export const ContainerButtons = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  `

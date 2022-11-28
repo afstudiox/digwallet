@@ -94,7 +94,7 @@ class Expense extends React.Component {
               value={ tag }
               onChange={ this.handleChange }
             >
-              <option>Alimentação</option>
+              <option selected>Alimentação</option>
               <option>Lazer</option>
               <option>Trabalho</option>
               <option>Transporte</option>

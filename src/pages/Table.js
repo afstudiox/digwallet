@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteExpense, editExpense } from '../actions';
 import '../style.css';
-import { BtnEditar, BtnExcluir, EditIcon, DeleteIcon, GeneralContainer } from '../styles/Table';
+import { BtnEditar, BtnExcluir, EditIcon, DeleteIcon, GeneralContainer, ContainerButtons } from '../styles/Table';
 
 
 class Table extends Component {
@@ -58,23 +58,25 @@ class Table extends Component {
                       <td>{ totalExpense.toFixed(2) }</td>
                       <td>Real</td>
                       <td>
-                        <BtnEditar
-                          id={ expense.id }
-                          type="button"
-                          data-testid="edit-btn"
-                          onClick={ this.editExpense }
-                        >
-                          <EditIcon size={24}/>
-                        </BtnEditar>
-  
-                        <BtnExcluir
-                          id={ expense.id }
-                          type="button"
-                          data-testid="delete-btn"
-                          onClick={ this.delExpense }
-                        >
-                          <DeleteIcon size={24}/>
-                        </BtnExcluir>
+                        <ContainerButtons>
+                          <BtnEditar
+                            id={ expense.id }
+                            type="button"
+                            data-testid="edit-btn"
+                            onClick={ this.editExpense }
+                          >
+                            <EditIcon size={24}/>
+                          </BtnEditar>
+    
+                          <BtnExcluir
+                            id={ expense.id }
+                            type="button"
+                            data-testid="delete-btn"
+                            onClick={ this.delExpense }
+                          >
+                            <DeleteIcon size={24}/>
+                          </BtnExcluir>
+                        </ContainerButtons>
                       </td>
                     </tr>);
                 })
