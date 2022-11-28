@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteExpense, editExpense } from '../actions';
 import '../style.css';
-import { GeneralContainer, BtnEditar, BtnExcluir } from '../styles/Table';
+import { BtnEditar, BtnExcluir, EditIcon, DeleteIcon, GeneralContainer } from '../styles/Table';
+
 
 class Table extends Component {
   delExpense = ({ target: { id } }) => {
@@ -63,7 +64,7 @@ class Table extends Component {
                           data-testid="edit-btn"
                           onClick={ this.editExpense }
                         >
-                          Edit
+                          <EditIcon size={24}/>
                         </BtnEditar>
   
                         <BtnExcluir
@@ -72,7 +73,7 @@ class Table extends Component {
                           data-testid="delete-btn"
                           onClick={ this.delExpense }
                         >
-                          Delete
+                          <DeleteIcon size={24}/>
                         </BtnExcluir>
                       </td>
                     </tr>);

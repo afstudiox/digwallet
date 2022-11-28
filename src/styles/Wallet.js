@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const GeneralContainer = styled.div`
+  border: 2px solid red;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
